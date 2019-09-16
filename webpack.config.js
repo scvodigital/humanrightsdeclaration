@@ -35,7 +35,7 @@ module.exports = (env) => {
     ],
     output: {
       filename: 'build/main.js',
-      library: 'HumanRightsDeclaration',
+      library: process.env.LIBRARY,
       libraryTarget: 'var'
     },
     module: {

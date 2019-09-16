@@ -9,10 +9,10 @@ const stringify = require('json-stringify-safe');
 
 const firebaseServiceAccount = require('./secret.json');
 
-const FIREBASE_ROOT = '/contexts-new/humanrightsdeclaration';
+const FIREBASE_ROOT = '/sites/' + process.env.SITE;
 const BUILD_DIR = path.join(__dirname, 'build');
 const BUCKET = 'scvo-assets';
-const DESTINATION_DIR = 'test/humanrightsdeclaration';
+const DESTINATION_DIR = 'test3/' + process.env.SITE;
 
 const storage = new Storage({
   projectId: 'scvo-net'

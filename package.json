@@ -1,13 +1,13 @@
 {
   "name": "@scvo/humanrightsdeclaration",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Site configuration and assets for humanrightsdeclaration.scot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0",
-    "start": "npm run clear-build && webpack --watch --env=dev",
-    "build": "npm run clear-build && webpack --env=prod",
-    "publish": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=\"secret.json\" node publish.js",
+    "start": "npm run clear-build && LIBRARY=HumanRightsDeclaration webpack --watch --env=dev",
+    "build": "npm run clear-build && LIBRARY=HumanRightsDeclaration webpack --env=prod",
+    "publish": "npm run build && GOOGLE_APPLICATION_CREDENTIALS=\"secret.json\" SITE=humanrightsdeclaration node publish.js",
     "clear-build": "rm -rf build/**",
     "deploy": "./deploy.sh"
   },
