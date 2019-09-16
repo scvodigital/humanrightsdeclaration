@@ -9,7 +9,7 @@ const stringify = require('json-stringify-safe');
 
 const firebaseServiceAccount = require('./secret.json');
 
-const FIREBASE_ROOT = '/sites-new/';
+const FIREBASE_ROOT = '/sites/humanrightsdeclaration';
 const BUILD_DIR = path.join(__dirname, 'build');
 const BUCKET = 'scvo-assets';
 const DESTINATION_DIR = 'test3/humanrightsdeclaration';
@@ -80,7 +80,7 @@ async function getUploadOptions() {
 
   for (const asset of assets) {
     try {
-      const destination = path.join(DESTINATION_DIR, site, asset.split(BUILD_DIR)[1]);
+      const destination = path.join(DESTINATION_DIR, asset.split(BUILD_DIR)[1]);
       const contentType = mime.lookup(asset) || 'text/plain';
       const gzipped = isGzip(fs.readFileSync(asset));
 
@@ -108,7 +108,7 @@ async function getUploadOptions() {
 async function uploadConfigs() {
   console.log('Uploading site configuration');
 
-  const firebasePath = FIREBASE_ROOT + 'humanrightsdeclaration';
+  const firebasePath = FIREBASE_ROOT;
   const configPath = path.join(BUILD_DIR, 'config.json');
 
   try {
