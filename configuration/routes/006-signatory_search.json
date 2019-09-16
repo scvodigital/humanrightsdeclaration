@@ -9,12 +9,12 @@
       "name": "primaryResponse",
       "taskModule": "elasticsearch",
       "config": {
-        "connectionStringTemplate": "{$../../../elasticsearch-url.txt}",
+        "connectionStringTemplate": "{$../data/elasticsearch-url.txt}",
         "elasticsearchConfig": {
           "apiVersion": "5.6"
         },
         "queryTemplates": {
-          "index": "{$../../../elasticsearch-index.txt}",
+          "index": "{$../data/elasticsearch-index.txt}",
           "type": "charter-signatory-humanrights",
           "template": ">context.metaData.handlebars.queries.signatory-search"
         }
@@ -25,14 +25,14 @@
       "name": "supplimentaryResponses",
       "taskModule": "elasticsearch",
       "config": {
-        "connectionStringTemplate": "{$../../../elasticsearch-url.txt}",
+        "connectionStringTemplate": "{$../data/elasticsearch-url.txt}",
         "elasticsearchConfig": {
           "apiVersion": "5.6"
         },
         "queryTemplates": [
           {
             "name": "total",
-            "index": "{$../../../elasticsearch-index.txt}",
+            "index": "{$../data/elasticsearch-index.txt}",
             "type": "charter-signatory-humanrights",
             "template": ">context.metaData.handlebars.queries.signatory-total"
           }

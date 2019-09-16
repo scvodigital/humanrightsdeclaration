@@ -9,7 +9,7 @@
     "{:./routes/*.json}"
   ],
   "metaData": {
-    "assetsVersion": "{:../../../package.json@version}",
+    "assetsVersion": "{:../package.json@version}",
     "assetsBase": "https://storage.googleapis.com/scvo-assets/test/humanrightsdeclaration/",
     "menus": "{:./data/menus.json}",
     "handlebars": {
