@@ -1,6 +1,6 @@
 @import "./node_modules/material-components-web/material-components-web.scss";
 @import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
-@import url('//fonts.googleapis.com/css?family=Rubik:400,500,700|Open+Sans:400,600');
+@import url('//fonts.googleapis.com/css?family=Rubik:400,500,700');
 
 $unit: 1rem;
 $brand-border-width: 2px;
@@ -8,9 +8,8 @@ $brand-border-width: 2px;
 $mdc-theme-primary: #5C96DD;
 $mdc-theme-secondary: #2C2C2B;
 
-$mdc-theme-footer: #37474F; // Blue Gray 800
-$mdc-theme-footer-light: #E1E3E4;
-$mdc-theme-footer-dark: #263238; // Blue Gray 900
+$mdc-theme-footer: #244B5A;
+$mdc-theme-footer-light: #FEF9F9;
 
 $toolbar-shadow-reverse: 0px -3px 5px -1px rgba(0, 0, 0, 0.2), 0px -5px 8px 0px rgba(0, 0, 0, 0.14), 0px -1px 14px 0px rgba(0, 0, 0, 0.12);
 
@@ -20,8 +19,18 @@ $base-font-weight:                  400;
 $heading-font-family:               "Rubik", Helvetica, Arial, sans-serif;
 $heading-font-weight:               700;
 
-$footer-font-family:                "Open Sans", Helvetica, Arial, sans-serif;
+$footer-font-family:                "Ingra", Helvetica, Arial, sans-serif;
 $footer-font-weight:                400;
+
+$gray-color: #D5D8DC;
+$secondary-color: #244B5A;
+
+.scvo-link-bar,
+footer {
+  p, li, div, h3, a, strong {
+    font-family: $footer-font-family;
+  }
+}
 
 :root {
   --mdc-layout-grid-margin-desktop: 0;
@@ -43,7 +52,7 @@ html {
   line-height: 1.45;
 }
 body {
-  background: $mdc-theme-footer-dark;
+  background: $mdc-theme-footer-light;
   min-height: 100%;
   padding: 0;
   margin: 0;
@@ -621,8 +630,8 @@ footer {
   --mdc-layout-grid-gutter-tablet: 1rem;
   --mdc-layout-grid-margin-phone: 1rem;
   --mdc-layout-grid-gutter-phone: 1rem;
-  color: $mdc-theme-footer;
-  background-color: $mdc-theme-footer-light;
+  color: white;
+  background-color: $mdc-theme-footer;
   p, li, div {
     font-family: $footer-font-family;
     font-weight: $footer-font-weight;
@@ -632,7 +641,7 @@ footer {
   h3, a, strong {
     font-family: $footer-font-family;
     font-weight: 600;
-    color: $mdc-theme-footer;
+    color: white;
   }
   .brand-logo {
     margin-right: $unit;
@@ -641,41 +650,48 @@ footer {
     }
   }
   h3 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    margin-top: $unit/2;
+    font-size: 1.4rem;
+    // text-transform: uppercase;
   }
   strong {
     font-weight: 600;
   }
   p {
-    color: $mdc-theme-footer;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: $unit;
     a {
-      color: $mdc-theme-footer;
+      color: white;
       text-decoration: none;
       font-weight: 600;
       // text-decoration: underline;
     }
     a:hover {
       text-decoration: underline;
-      color: $mdc-theme-footer;
+      color: white;
     }
   }
   .footer-copyright {
-    background-color: $mdc-theme-footer-dark;
+    background-color: $mdc-theme-footer-light;
     p {
-      color: white;
-      font-size: 0.8rem;
+      color: $mdc-theme-footer;
+      font-size: 0.9rem;
       margin-bottom: 0;
       a {
-        color: white;
+        color: $mdc-theme-footer;
       }
+    }
+    .brand-logo img {
+      float: right;
+      width: 125px;
     }
   }
   .container-fluid {
     position: relative;
   }
   .footer-main {
-    padding-bottom: $unit/2;
+    padding: $unit/2 0 $unit;
     // border-top: $unit solid $mdc-theme-primary;
     // background-image: linear-gradient(
     // -120deg,
@@ -699,7 +715,7 @@ footer {
     padding-bottom: 0;
   }
   .mdc-list .mdc-list-item a {
-    color: $mdc-theme-footer;
+    color: white;
     font-weight: 600;
   }
   .mdc-list .mdc-list-item a:hover {
@@ -707,7 +723,7 @@ footer {
   }
   .brand-logo {
     margin-top: 1.5rem;
-    display: inline-block;
+    // display: inline-block;
     // text-align: right;
     img {
       margin-bottom: 0;
@@ -724,7 +740,7 @@ footer {
   .fa-ul li,
   .mdc-list-item,
   a {
-    color: $mdc-theme-footer;
+    color: white;
     // font-size: 1rem;
   }
   .fa-ul {

@@ -42,6 +42,42 @@
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
 
+  <style type="text/css">
+  @font-face {
+  font-family: 'Asap';
+  src: url('{{~>asset_url url='fonts/Asap-Bold.eot'~}}');
+  src: url('{{~>asset_url url='fonts/Asap-Bold.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/Asap-Bold.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/Asap-Bold.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/Asap-Bold.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/Asap-Bold.svg#Asap-Bold'~}}') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Ingra';
+  src: url('{{~>asset_url url='fonts/IngraSCVO-Regular.eot'~}}');
+  src: url('{{~>asset_url url='fonts/IngraSCVO-Regular.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.svg#IngraSCVO-Regular'~}}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Ingra';
+  src: url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.eot'~}}');
+  src: url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.svg#IngraSCVO-SemiBold'~}}') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  }
+  </style>
+
   <link type="text/css" rel="stylesheet" href="{{~>asset_url url='main.css'~}}">
 </head>
 <body class="{{#if request.params.path}}{{replace request.params.path '_' ' '}}{{else}}home{{/if}}">
@@ -107,17 +143,17 @@
                   <h3>About</h3>
                   <p>
                     The <strong>Scotland Declaration on Human Rights</strong> is run by the
-                    <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>
+                    <a href="https://scvo.scot">Scottish Council for Voluntary Organisations</a>
                     with support from <a href="https://hrcscotland.org">Human Rights Consortium Scotland</a>, <a href="http://www.scottishhumanrights.com">Scottish Human Rights Commission</a> and the <a href="https://www.equalityhumanrights.com">Equality and Human Rights Commission</a>
                   </p>
                   <a href="https://www.equalityhumanrights.com" class="brand-logo" title="Equality Human Rights Scotland">
-                    <img src="https://storage.googleapis.com/human-rights-declaration/ehrc-logo.svg" style="filter: invert(100%); opacity: 0.7;" />
+                    <img src="https://storage.googleapis.com/human-rights-declaration/ehrc-logo.svg" />
                   </a>
                   <a href="http://www.scottishhumanrights.com" class="brand-logo" title="Scottish Human Rights Commission">
-                    <img src="https://storage.googleapis.com/human-rights-declaration/shrc-logo.svg" style="max-width:none; height:44px; filter: grayscale(1) invert(0);" />
+                    <img src="https://storage.googleapis.com/human-rights-declaration/shrc-logo.svg" style="max-width:none; height:44px; filter: grayscale(1) brightness(10);" />
                   </a>
                   <a href="https://hrcscotland.org" class="brand-logo" title="Human Rights Consortium Scotland">
-                    <img src="https://storage.googleapis.com/human-rights-declaration/hrcs-logo.jpg" style="filter: grayscale(1) invert(0); mix-blend-mode: darken;" />
+                    <img src="https://storage.googleapis.com/human-rights-declaration/hrcs-logo.jpg" style="filter: grayscale(1) invert(1); mix-blend-mode: screen;" />
                   </a>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
@@ -147,12 +183,13 @@
               <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-9-desktop">
                   <p>
-                    &copy; {{momentFormat (moment) "YYYY"}}. The Scottish Council for Voluntary Organisations (SCVO) is a Scottish Charitable Incorporated Organisation. Charity registered in Scotland <a href="https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC003558">SC003558</a>. Registered office Mansfield Traquair Centre, 15 Mansfield Place, Edinburgh EH3 6BB.
+                    &copy; {{momentFormat (moment) "YYYY"}}. The Scottish Council for Voluntary Organisations (SCVO) is a Scottish Charitable Incorporated Organisation.<br />Charity registered in Scotland <a href="https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC003558">SC003558</a>. Registered office Mansfield Traquair Centre, 15 Mansfield Place, Edinburgh EH3 6BB.
                   </p>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
-                  <a href="https://scvo.org" title="Scottish Council for Voluntary Organisations">
-                    <img src="https://storage.googleapis.com/scvo-assets/scvo-frontend/assets/images/logos/scvo.png" alt="Scottish Council for Voluntary Organisations" class="logo scvo" />
+                  <a href="https://scvo.scot" title="Scottish Council for Voluntary Organisations" class="brand-logo">
+                    {{!-- <img src="https://storage.googleapis.com/scvo-assets/scvo-frontend/assets/images/logos/scvo.png" alt="Scottish Council for Voluntary Organisations" class="logo scvo" /> --}}
+                    <img src="{{~>asset_url url='images/logos/scvo-secondary.svg'~}}" alt="Scottish Council for Voluntary Organisations" />
                   </a>
                 </div>
               </div>
