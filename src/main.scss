@@ -52,7 +52,7 @@ html {
   line-height: 1.45;
 }
 body {
-  background: $mdc-theme-footer-light;
+  background: $mdc-theme-footer;
   min-height: 100%;
   padding: 0;
   margin: 0;
@@ -673,14 +673,14 @@ footer {
     }
   }
   .footer-copyright {
-    background-color: $mdc-theme-footer-light;
+    // background-color: $mdc-theme-footer;
     p {
-      color: $mdc-theme-footer;
+      // color: $mdc-theme-footer;
       font-size: 0.9rem;
       margin-bottom: 0;
-      a {
-        color: $mdc-theme-footer;
-      }
+      // a {
+      //   color: $mdc-theme-footer;
+      // }
     }
     .brand-logo img {
       float: right;
@@ -691,7 +691,7 @@ footer {
     position: relative;
   }
   .footer-main {
-    padding: $unit/2 0 $unit;
+    padding: $unit 0 $unit/2;
     // border-top: $unit solid $mdc-theme-primary;
     // background-image: linear-gradient(
     // -120deg,
