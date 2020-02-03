@@ -24,6 +24,8 @@ $footer-font-weight:                400;
 
 $gray-color: #D5D8DC;
 $secondary-color: #244B5A;
+$transition-speed: 0.3s;
+$thick-line: 5px;
 
 .scvo-link-bar,
 footer {
@@ -652,7 +654,6 @@ footer {
   h3 {
     margin-top: $unit/2;
     font-size: 1.4rem;
-    // text-transform: uppercase;
   }
   strong {
     font-weight: 600;
@@ -661,26 +662,24 @@ footer {
     color: white;
     font-size: 1rem;
     margin-bottom: $unit;
-    a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      // text-decoration: underline;
-    }
-    a:hover {
-      text-decoration: underline;
-      color: white;
-    }
+  }
+  a {
+    color: white;
+    text-decoration: none !important;
+    border-bottom: $thick-line solid transparent;
+    transition: border $transition-speed;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    color: white;
+    border-bottom-color: white;
+    text-decoration: none !important;
   }
   .footer-copyright {
-    // background-color: $mdc-theme-footer;
     p {
-      // color: $mdc-theme-footer;
       font-size: 0.9rem;
       margin-bottom: 0;
-      // a {
-      //   color: $mdc-theme-footer;
-      // }
     }
     .brand-logo img {
       float: right;
@@ -692,22 +691,6 @@ footer {
   }
   .footer-main {
     padding: $unit 0 $unit/2;
-    // border-top: $unit solid $mdc-theme-primary;
-    // background-image: linear-gradient(
-    // -120deg,
-    // #1A1A19,
-    // #1A1A19 $unit*2,
-    // #5C96DD $unit*2.05,
-    // #5C96DD $unit*2.5,
-    // white $unit*2.55,
-    // white $unit*3,
-    // $mdc-theme-secondary $unit*3.05,
-    // $mdc-theme-secondary
-    // );
-    // box-shadow: $toolbar-shadow-reverse;
-    // border-top: $unit/2 solid #5C96DD;
-    // background-image: linear-gradient(120deg, $mdc-theme-secondary, $mdc-theme-secondary 50%, #1A1A19 95%, #1A1A19);
-    // padding: $unit 0 $unit*2;
   }
   h3 {
     font-weight: 800;
@@ -716,15 +699,14 @@ footer {
   }
   .mdc-list .mdc-list-item a {
     color: white;
+    font-size: 1rem;
     font-weight: 600;
   }
-  .mdc-list .mdc-list-item a:hover {
-    text-decoration: underline !important;
+  a.brand-logo {
+    border: none;
   }
   .brand-logo {
     margin-top: 1.5rem;
-    // display: inline-block;
-    // text-align: right;
     img {
       margin-bottom: 0;
     }
@@ -741,7 +723,6 @@ footer {
   .mdc-list-item,
   a {
     color: white;
-    // font-size: 1rem;
   }
   .fa-ul {
     margin: 0 0 0 $unit*2;
@@ -759,9 +740,10 @@ footer {
     margin-bottom: 0;
   }
   .mdc-list {
+    font-size: 1rem;
     padding: 0;
     .mdc-list-item {
-      height: $unit*1.5;
+      height: auto;
       a {
         text-decoration: none;
       }
@@ -775,6 +757,9 @@ footer {
   }
   .menu ul {
     margin-top: 0;
+  }
+  :not(.mdc-list--non-interactive)>:not(.mdc-list-item--disabled).mdc-list-item:hover::before {
+    opacity: 0;
   }
 }
 
