@@ -246,7 +246,6 @@ a:hover {
       padding-left: 0;
     }
     .mdc-tab {
-      transition: 0.2s;
       min-width: 0;
       font-size: 1.1rem;
       padding: 0 $unit*.7;
@@ -254,9 +253,10 @@ a:hover {
       display: inline-block;
       height: 2.35rem;
       .mdc-tab--label {
+        transition: border $transition-speed;
         text-transform: uppercase;
         display: block;
-        border-bottom: 3px solid white;
+        border-bottom: $thick-line solid white;
       }
     }
     .mdc-tab--active,
