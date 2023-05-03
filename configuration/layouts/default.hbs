@@ -10,7 +10,15 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-VZCNGZJWC7');
+    gtag('config', 'G-VZCNGZJWC7', {
+      'send_page_view': true,
+      'anonymize_ip': true,
+      'cookieDomain': 'none',
+      'custom_map': {
+        'dimension1': 'hit_type',
+        'dimension2': 'parent_document'
+      }
+    });
   </script>
 
   {{{layoutParts.head}}}
@@ -33,7 +41,6 @@
   <meta name="msapplication-TileImage" content="{{~>asset_url url='images/icons/ms-icon-144x144.png'~}}">
   <meta name="theme-color" content="#5C96DD">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3467930-28"></script>
   <script>
   {{#ifAny request.params.query.debug (compare request.url.hostname "humanrightsdeclaration.local") ~}}
   console.log('#### DEBUG MODE ON ####');
